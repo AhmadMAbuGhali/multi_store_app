@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:multi_store_app/main_screens/supplier_home.dart';
+import 'package:multi_store_app/main_screens/welcome_screen.dart';
 
 import 'main_screens/customer_home.dart';
 
@@ -12,9 +14,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return const MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CustomerHomeScreen(),
+    //  home: WelcomeScreen(),
+     initialRoute: '/welcome_screen',
+      routes: {
+        '/welcome_screen':(context)=> const WelcomeScreen(),
+        '/supplier_home':(context)=> const SupplierHomeScreen(),
+        '/customer_home':(context)=> const CustomerHomeScreen(),
+      },
     );
   }
 }

@@ -1,4 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:multi_store_app/categories/accessories_category.dart';
+import 'package:multi_store_app/categories/bags_category.dart';
+import 'package:multi_store_app/categories/beauty_category.dart';
+import 'package:multi_store_app/categories/electronics_category.dart';
+import 'package:multi_store_app/categories/home_garden_category.dart';
+import 'package:multi_store_app/categories/kids_category.dart';
+import 'package:multi_store_app/categories/men_category.dart';
+import 'package:multi_store_app/categories/shoes_category.dart';
+import 'package:multi_store_app/categories/women_category.dart';
 import 'package:multi_store_app/widget/fake_search.dart';
 
 import '../minor_screen/search.dart';
@@ -113,33 +122,15 @@ void initState(){
         },
         scrollDirection: Axis.vertical,
         children: const [
-          Center(
-            child: Text('Men'),
-          ),
-          Center(
-            child: Text('Women'),
-          ),
-          Center(
-            child: Text('Shoes'),
-          ),
-          Center(
-            child: Text('Electronics'),
-          ),
-          Center(
-            child: Text('Accessories'),
-          ),
-          Center(
-            child: Text('bags'),
-          ),
-          Center(
-            child: Text('home & garden'),
-          ),
-          Center(
-            child: Text('beauty'),
-          ),
-          Center(
-            child: Text('kids'),
-          ),
+         MenCategory(),
+          WomenCategory(),
+        ShoesCategory(),
+         ElectronicsCategory(),
+          AccessoriesCategory(),
+          BagsCategory(),
+          HomeGardenCategory(),
+          BeautyCategory(),
+          KidsCategory(),
         ],
       ),
     );
